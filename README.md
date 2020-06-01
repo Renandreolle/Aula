@@ -101,6 +101,7 @@ Esses parâmetros adicionais nos permitem fazer operações sem ter que usar exp
 Note que o valor do acumulador pode ser uma string, array ou objeto. Nesse outro exemplo, vamos criar um objeto:
 
 <br>
+
 ~~~Javascript
 const arr = ['um','dois','três','quatro'];
 const obj = arr.reduce((lista,numero,indice) => { // Note que usaremos o parâmetro opcional indice
@@ -110,8 +111,9 @@ const obj = arr.reduce((lista,numero,indice) => { // Note que usaremos o parâme
     );
 console.log(obj); // { um: 1, dois: 2, 'três': 3, quatro: 4 }
 ~~~
-<br>
 
+Com isso podemos ver a versatilidade do reduce!
+<br>
 
 ## Vamos fazer juntos!
 
@@ -210,9 +212,21 @@ Pra finalizar, crie um [Pull Request](https://help.github.com/en/github/collabor
 
 <br>
 
+1. A partir do array ['letra','reduzida','mapeada','grande'], crie um array com todos os elementos escritos somente em maiúsculas.
+
+2. Dado o array ['1','4','10','7','1','4','4'], converta os valores em números e os coloquem em ordem crescente.
+
+3. Pegue o array resultante do exercício 2 e retorne o produtório dos valore dele (O produtório dos valores de [1,2,3] é 1*2*3).
+
+4. Pegue o array original do exercício 2 e retorne um array com os índices dos elementos iguais a '4' no array
+
+### Bônus
+
+5. Pegue o array original do exercício 2 e retorne um objeto que diga quantas vezes '1', '4', '7' e '10' foram valores do array.
+
 ## Recursos adicionais
 
 * [Página da w3schools sobre map](https://www.w3schools.com/jsref/jsref_map.asp)
 * [Página da w3schools sobre reduce](https://www.w3schools.com/jsref/jsref_reduce.asp)
-* 
+* [Como fazer mais com reduce (em inglês)](https://jrsinclair.com/articles/2019/functional-js-do-more-with-reduce/)
 
