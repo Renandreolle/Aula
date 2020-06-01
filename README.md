@@ -216,7 +216,7 @@ Pra finalizar, crie um [Pull Request](https://help.github.com/en/github/collabor
 
 2. Dado o array ['1','4','10','7','1','4','4'], converta os valores em números e os coloquem em ordem crescente.
 
-3. Pegue o array resultante do exercício 2 e retorne o produtório dos valore dele (O produtório dos valores de [1,2,3] é 6).
+3. Pegue o array resultante do exercício 2 e retorne o produtório dos valores dele (O produtório dos valores de [1,2,3] é 6).
 
 4. Pegue o array original do exercício 2 e retorne um array com os índices dos elementos iguais a '4' no array
 
