@@ -18,6 +18,7 @@ As funções da aula de hoje possuem uma importância adicional, seja pelo poder
 ##### Tempo sugerido para realização: 90 minutos
 
 ### Array.map
+---
 A função *Array.map* é bastante similar à função *Array.forEach*, porém com uma diferença importante: a função *map* retorna um novo array com o mesmo tamanho do array original, já *forEach* retorna sempre undefined, o que nos forçava a criar uma variável adicional para armazenar os valores durante a iteração, como podemos ver no código abaixo:
 
 ~~~Javascript
@@ -54,8 +55,10 @@ console.log(c); // [1,9]
 Como podemos ver, *map* nos permite escrever iterações sobre arrays de forma extremamente enxuta, se comparado ao mesmo código usando *forEach* ou *for*.
 
 ### Array.reduce
+---
 
 A função *Array.reduce* é diferente das outras HOFs, pois além na função que é passada como parâmetro, além do valor iterado passado como parâmetro é também passada uma variável denominada **acumulador**, que serve para armazenar os resultados das iterações e é também o que a função *reduce* retorna. Após a função passada como parâmetro, podemos também passamos o valor inicial do acumulador.
+
 Por exemplo, se temos um array de números e quisermos somar esses números, podemos usar o acumulador para guardar o resultado das somas com os valores em cada iteração.
 Para ficar mais claro, observe esse exemplo:
 
@@ -65,7 +68,9 @@ let somatorio = array.reduce((somaParcial, valor) => valor + somaParcial, 0); //
 console.log(somatorio); // 20, que é a soma dos números do array.
 ~~~
 
+<br>
 Podemos ver nessa tabela o fluxo de iteração:
+
 Iteração | Acumulador antes | valor | Acumulador depois
 ---------|------------------|-------|------------------
 1 | 0 | 2 | 2
@@ -73,11 +78,13 @@ Iteração | Acumulador antes | valor | Acumulador depois
 3 | 6 | 6 | 12
 4 | 12 | 8 | 20
 
+<br>
 Note que nas outras HOFs, nossa função passada como parâmetro recebia apenas os valores do array, mas no caso do *reduce*, essa função recebe também o acumulador, que no exemplo passado, era a soma parcial do somatório.
 Além do valor e do acumulador, a função auxiliar pode ter outros 2 parâmetros opcionais, de forma que nosso reduce pode ser escrito assim:
 `esseArray.reduce((acumulador,valor,index,array) => { 'seu código aqui' }, valorInicial)`
 Onde o index se refere ao índice do valor iterado, e array se refere ao próprio array iterado (esseArray). Lembre-se que **a ordem é importante aqui**: O acumulador é declarado primeiro, depois o valor, o índice e o array. Usaremos esses parâmetros opcionais no próximo exemplo:
 
+<br>
 ~~~Javascript
 const nums = [1,2,3,4,5,6,'ignora']
 const totalNumero = nums.reduce((soma,valor,indice,array ) => {
@@ -89,9 +96,11 @@ const totalNumero = nums.reduce((soma,valor,indice,array ) => {
 console.log(totalNumero); // 21, que é a soma dos números do array nums
 ~~~
 
+<br>
 Esses parâmetros adicionais nos permitem fazer operações sem ter que usar explicitamente variáveis definidas fora do escopo, tornando nosso código conciso e legível.
 Note que o valor do acumulador pode ser uma string, array ou objeto. Nesse outro exemplo, vamos criar um objeto:
 
+<br>
 ~~~Javascript
 const arr = ['um','dois','três','quatro'];
 const obj = arr.reduce((lista,numero,indice) => { // Note que usaremos o parâmetro opcional indice
@@ -101,7 +110,7 @@ const obj = arr.reduce((lista,numero,indice) => { // Note que usaremos o parâme
     );
 console.log(obj); // { um: 1, dois: 2, 'três': 3, quatro: 4 }
 ~~~
-
+<br>
 
 
 ## Vamos fazer juntos!
@@ -110,6 +119,7 @@ console.log(obj); // { um: 1, dois: 2, 'três': 3, quatro: 4 }
 
 Aula ao vivo! Vamos para o Slack, onde o link estará disponível.
 
+<br>
 ## Exercícios
 
 Hora de pôr a mão na massa!
