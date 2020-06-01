@@ -116,6 +116,7 @@ Com isso podemos ver a versatilidade do reduce!
 <br>
 
 ## Vamos fazer juntos!
+##### Tempo sugerido para realização: 80 minutos
 
 É hora de colocar em prática todo esse conhecimento. 💪
 
@@ -123,6 +124,7 @@ Aula ao vivo! Vamos para o Slack, onde o link estará disponível.
 
 <br>
 ## Exercícios
+##### Tempo sugerido para realização: 140 minutos
 
 Hora de pôr a mão na massa!
 <br>
